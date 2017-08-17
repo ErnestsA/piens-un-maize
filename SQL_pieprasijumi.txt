@@ -1,0 +1,11 @@
+SELECT * FROM Product WHERE productName LIKE %xx%
+
+Izvadīs produktu sarakstu. Izvēlas produktu - attiecīgi tiek iegūts produkta ID.
+
+Jauns pieprasījums ar produkta ID.
+
+SELECT price FROM storeproductprice WHERE product_id = xx
+LEFT JOIN product ON storeproductprice.product_id = product.product_id
+LEFT JOIN store ON storeproductprice.store_id = store.id
+
+Tiek iegūta tabula ar cenu nosaukumu un veikalu.
